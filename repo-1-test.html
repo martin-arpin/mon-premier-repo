@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation new update</title>
+    <meta charset="UTF-8" />
+
+    <style>
+  
+        .element {
+            height: 250px;
+            width: 250px;
+            margin: 0 auto;
+            background-color: red;
+            
+            animation-duration: 1.5s; 
+            animation-timing-function: ease-out; 
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+            animation-name: mon_animation;
+
+            /* animation: 1.5s ease-out 1s infinite alternate forwards running mon_animation; */
+        }  
+
+             .element:hover { animation-play-state: paused; }
+
+        @keyframes mon_animation {
+            0% {
+                transform: scale(.3);
+                background-color: red;
+                border-radius: 100%;
+            }
+            50% {
+                transform: scale(1);
+                border-radius: 0;
+                background-color: orange;
+            }
+            100% {
+                background-color: yellow;
+            }
+        }
+
+    </style>
+
+  </head>
+
+<body>
+
+    <div class="element"></div>
+
+</body>
+</html>
